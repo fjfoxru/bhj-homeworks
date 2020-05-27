@@ -3,17 +3,16 @@ const allSubMenus = Array.from(document.getElementsByClassName('menu_sub'));
 
 
 menuLinks.forEach( link => {
-    link.onclick = () => {
-        allSubMenus.forEach(submenu => submenu.className = 'menu menu_sub' );
+    link.onclick = () => {   
         let subMenu = link.nextElementSibling;
         if (subMenu != null) {
-            subMenu.className = 'menu menu_sub menu_active';
+                allSubMenus.forEach(allSubMenu => {
+                    if (allSubMenu !== allSubMenus[allSubMenus.indexOf(subMenu)]) {
+                        allSubMenu.classList.remove('menu_active');
+                    }     
+                });
+            subMenu.classList.toggle('menu_active');
             return false;
         }
     }
-}
-
-
-
-
-)
+});
