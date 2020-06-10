@@ -3,7 +3,7 @@ body {
 }
 .cart__products {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -30,6 +30,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  position: relative;
 }
 .product__title {
   width: 100%;
@@ -88,4 +89,10 @@ body {
 
 .product-shadow {
   position: absolute;
+}
+
+.animate_img {
+  position: absolute;
+  transition: 0.2s;
+  top: 0;
 }
