@@ -18,6 +18,8 @@ function robotSay () {
         </div>
     </div>
     `;
+    const scrollToMessage = messagesArea.lastElementChild;
+    scrollToMessage.scrollIntoView();
 }
 messageInput.addEventListener('focus', () => {
     clearTimeout(timeout);
@@ -32,6 +34,8 @@ messageInput.addEventListener('focus', () => {
             </div>
         </div>
         `;
+    
+
         messageInput.value = '';
         robotSay();
     }
