@@ -6,7 +6,7 @@ document.addEventListener('click', (event) => {
         tooltip.textContent = event.target.getAttribute('title');
         tooltip.style.top = event.target.getBoundingClientRect().top + event.target.getBoundingClientRect().height + 'px';
         tooltip.style.left = event.target.getBoundingClientRect().left + 'px';
-        tooltip.classList.add('tooltip_active');
+        tooltip.classList.toggle('tooltip_active');
     } else {
         tooltip.classList.remove('tooltip_active');      
     }
